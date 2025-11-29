@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- Título Principal -->
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Sistema de Gestión"
+        android:textAlignment="center"
+        android:textColor="#1E3A8A"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Alumnos"
+        android:textAlignment="center"
+        android:textColor="#6B7280"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
+
+    <!-- Card contenedor -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitulo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Botón Altas -->
+            <Button
+                android:id="@+id/btn_altas"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#3B82F6"
+                android:onClick="abrirActivity"
+                android:text="@string/txt_btn_altas"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="4dp"
+                app:icon="@android:drawable/ic_input_add"
+                app:iconGravity="start"
+                app:iconTint="#FFFFFF" />
+
+            <!-- Botón Bajas -->
+            <Button
+                android:id="@+id/btn_bajas"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#EF4444"
+                android:onClick="abrirActivity"
+                android:text="@string/txt_btn_bajas"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="4dp"
+                app:icon="@android:drawable/ic_delete"
+                app:iconGravity="start"
+                app:iconTint="#FFFFFF" />
+
+            <!-- Botón Modificar -->
+            <Button
+                android:id="@+id/btn_modificar"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#F59E0B"
+                android:onClick="abrirActivity"
+                android:text="@string/txt_btn_cambios"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="4dp"
+                app:icon="@android:drawable/ic_menu_edit"
+                app:iconGravity="start"
+                app:iconTint="#FFFFFF" />
+
+            <!-- Botón Consultar -->
+            <Button
+                android:id="@+id/btn_consultar"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:backgroundTint="#10B981"
+                android:onClick="abrirActivity"
+                android:text="@string/txt_btn_consultas"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="4dp"
+                app:icon="@android:drawable/ic_menu_search"
+                app:iconGravity="start"
+                app:iconTint="#FFFFFF" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
